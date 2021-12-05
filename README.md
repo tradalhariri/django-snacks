@@ -1,0 +1,1 @@
+[pull request](https://github.com/tradalhariri/django-snacks/pull/1)

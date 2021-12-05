@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Things</title>
+</head>
+<style>
+header{
+    background-color: rgb(29, 27, 27);
+
+}
+.nav-menu {
+  display: flex;
+  padding: 20px 15px; 
+  align-items: center;
+}
+
+.header-menu-list {
+  margin: 0;
+  padding-left: 400px;
+  width: 400px;
+  height: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+.menu-item {
+  list-style-type: none;
+}
+
+.menu-item:not(:last-cjild) {
+  margin-right: 20px;
+}
+
+.menu-link {
+  text-decoration: none;
+  color: white;
+  line-height: 5px;
+  padding: 10px 15px;
+}
+
+.menu-link:hover {
+  background-color: #dddd;
+  border-radius: 8px;
+}
+
+.buttons {
+  display: flex;
+  padding-left: 200px; 
+}
+
+.menu-btn {
+  max-width: 180px;
+  padding: 13px 20px;
+  line-height: 5px;
+  overflow-wrap: break-word;
+  background-color: white;
+  border: 1px solid #dddd;
+  border-radius: 10px;
+}
+
+.menu-btn:not(:last-child) {
+  margin-right: 20px;
+}
+.menu-input {
+  margin-right: 20px;
+  width: 200px;
+  padding: 0;
+  box-sizing: border-box;
+  padding-left: 5px;
+  border-radius: 8px;
+}
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: rgb(29, 27, 27);
+   color: white;
+   text-align: center;
+}
+
+</style>
+<body>
+        <header class="header"> 
+          <nav class="nav-menu">
+            <ul class="header-menu-list">
+              <li class="menu-item"> <a class="menu-link"  href="{% url 'home' %}"> Home </a> </li>
+              <li class="menu-item"> 
+                <a class="menu-link" href="{% url 'about-us' %}"> About us </a> </li>
+            </ul>
+          </nav>
+        </header> 
+
+    <main style="text-align:center;padding: 50px;">
+    {% block content %}
+
+    {% endblock %}
+</main>
+<footer class="footer">
+    <p>Diango First App</p>
+</footer>
+</body>
+</html>
+
