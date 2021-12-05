@@ -8,9 +8,11 @@ authors = ["tradalhariri <trad.alhariri@gmail.com>"]
 python = "^3.9"
 black = "^21.11b1"
 flake8 = "^4.0.1"
-Django = "3.2.0"
+Django = "3.2.8"
 
 [tool.poetry.dev-dependencies]
+black = "^21.11b1"
+flake8 = "^4.0.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
